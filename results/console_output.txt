@@ -1,0 +1,40 @@
+               1927-1998 (in-sample)  1963-1995 (paper)  1999-2026 (out-of-sample)  1927-2026 (full)  Vol-scaled 1927-2026
+Return (ann.)                  0.073              0.087                      0.042             0.064                 0.085
+Vol (ann.)                     0.156              0.135                      0.183             0.164                 0.149
+Sharpe                         0.464              0.640                      0.232             0.390                 0.569
+t-stat                         3.922              3.626                      1.223             3.890                 5.658
+Max drawdown                  -0.804             -0.331                     -0.559            -0.804                -0.594
+Skew                          -2.833             -0.387                     -0.873            -2.108                -0.541
+Worst month                   -0.511             -0.169                     -0.351            -0.511                -0.231
+Months                       858.000            385.000                    333.000          1191.000              1185.000
+
+Trials: 25 | Sharpe the best trial would show by luck: 0.43 | Deflated Sharpe 1927-1998: rule 0.605, vol-scaled 0.971
+Average turnover: 84% of capital per month (costs: 1.26% per year)
+
+                                alpha_per_year  alpha_t  beta_market  beta_umd     r2
+Market only                             0.081    5.386       -0.205       NaN  0.053
+Market + stock momentum (UMD)           0.001    0.083        0.041     0.815  0.631
+
+Worst months:
+ 1932-08-31   -0.511
+1933-05-31   -0.351
+2009-04-30   -0.351
+1932-07-31   -0.271
+1938-06-30   -0.190 
+
+Crashes:
+               Industry momentum  Vol-scaled  US market
+Jun-Aug 1932             -0.609      -0.282      0.819
+Mar-May 2009             -0.404      -0.235      0.264
+
+Sector ETFs vs 49 industries:
+                49 industries (same months)  11 sector ETFs
+Return (ann.)                        0.027          -0.004
+Vol (ann.)                           0.179           0.140
+Sharpe                               0.149          -0.028
+t-stat                               0.771          -0.143
+Max drawdown                        -0.559          -0.542
+Skew                                -0.977          -0.258
+Worst month                         -0.351          -0.167
+Months                             321.000         322.000 
+Correlation: 0.73
