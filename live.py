@@ -11,6 +11,7 @@ I publish them one month BEFORE I trade them.
 
     python live.py positions   -> after the last Friday of a month: positions for the next rebalance
     python live.py week        -> every weekend: P&L of the week, chart, block for LIVE.md
+    python live.py chart       -> the empty cone, before the first live week
 """
 import sys
 import numpy as np
@@ -114,7 +115,7 @@ def simulate():
 def weekly_report():
     rows = simulate()
     if not rows:
-        print("No live week yet."); return
+        print("No live week yet."); live_chart(pd.DataFrame({"cumulative": []})); return
     hist = pd.DataFrame(rows).drop(columns=["detail", "notional"])
     hist["cumulative"] = hist.nav / CAPITAL - 1
     hist.drop(columns="trade_date").to_csv(PNL, index=False, float_format="%.4f")
@@ -138,13 +139,14 @@ def live_chart(hist):
     """Live P&L against what the ETF backtest expects (mean, 1 and 2 standard deviations)."""
     bt_pnl = pd.read_csv("results/monthly_pnl_etf.csv", index_col=0)["pnl"]
     mu, sigma = bt_pnl.mean() * 12 / 52, bt_pnl.std() * np.sqrt(12) / np.sqrt(52)
-    weeks = np.arange(0, len(hist) + 1)
+    weeks = np.arange(0, max(52, len(hist)) + 1)          # the cone covers the first year
+    live = np.r_[0, hist.cumulative.values] if len(hist) else np.array([0.0])
     plt.figure(figsize=(8, 4))
     for k, a in [(2, 0.12), (1, 0.25)]:
         plt.fill_between(weeks, mu * weeks - k * sigma * np.sqrt(weeks), mu * weeks + k * sigma * np.sqrt(weeks),
                          color="tab:blue", alpha=a, lw=0)
     plt.plot(weeks, mu * weeks, color="tab:blue", ls="--", label="Backtest expectation (1 and 2 std)")
-    plt.plot(weeks, np.r_[0, hist.cumulative.values], color="black", lw=2, marker="o", label="Live")
+    plt.plot(np.arange(len(live)), live, color="black", lw=2, marker="o", label="Live")
     plt.axhline(0, color="grey", lw=0.8)
     plt.xlabel("Weeks since launch"); plt.ylabel("Cumulative return"); plt.legend(loc="upper left")
     plt.title("Live vs backtest"); plt.tight_layout(); plt.savefig("results/5_live_vs_backtest.png", dpi=120)
@@ -152,7 +154,9 @@ def live_chart(hist):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "positions":
+    if len(sys.argv) > 1 and sys.argv[1] == "chart":         # empty cone before the first week
+        live_chart(pd.DataFrame({"cumulative": []}))
+    elif len(sys.argv) > 1 and sys.argv[1] == "positions":
         new_positions()
     else:
         weekly_report()

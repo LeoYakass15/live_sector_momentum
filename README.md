@@ -153,8 +153,9 @@ Communication (XLC).
 
 ![Live vs backtest](results/5_live_vs_backtest.png)
 
-*(The chart appears after the first live week.)* After a few weeks a t-stat means nothing.
-The real question is whether the live P&L stays inside the range the backtest expects.
+The cone shows what the ETF backtest expects over the first year (mean, 1 and 2 standard
+deviations). The live point starts at 0 and one point is added every week. After a few weeks
+a t-stat means nothing. The real question is whether the live P&L stays inside the cone.
 
 **Latest week and full history:** [LIVE.md](LIVE.md).
 
@@ -167,3 +168,9 @@ python backtest.py                # backtest, statistics and charts in results/
 python live.py positions          # after the last Friday of the month: next positions
 python live.py week               # every weekend: P&L of the week
 ```
+
+References: Moskowitz and Grinblatt (1999), *Do Industries Explain Momentum?* Jegadeesh and
+Titman (1993). Barroso and Santa-Clara (2015), *Momentum Has Its Moments*. Daniel and
+Moskowitz (2016), *Momentum Crashes*. Bailey and Lopez de Prado (2014), *The Deflated Sharpe
+Ratio*. Harvey, Liu and Zhu (2016). McLean and Pontiff (2016), *Does Academic Research
+Destroy Stock Return Predictability?*
