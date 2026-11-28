@@ -147,9 +147,13 @@ investors.
 | NAV (start 1,000,000 USD) | - |
 | Worst week | - |
 
-**First positions** (traded at the close of Friday 27 November 2026): long Energy (XLE),
-Technology (XLK), Materials (XLB); short Utilities (XLU), Consumer Discretionary (XLY),
-Communication (XLC).
+**Status (28 November 2026):** the book is live since the close of Friday 27 November.
+The first weekly P&L comes on 5 December.
+
+| | Long | Short |
+|---|---|---|
+| **Current positions** (since 27 Nov) | Energy (XLE), Technology (XLK), Materials (XLB) | Utilities (XLU), Consumer Discretionary (XLY), Communication (XLC) |
+| **Next positions** (close of 24 Dec, published in advance) | Energy (XLE), Consumer Staples (XLP), Health Care (XLV) | Utilities (XLU), Consumer Discretionary (XLY), Communication (XLC) |
 
 ![Live vs backtest](results/5_live_vs_backtest.png)
 

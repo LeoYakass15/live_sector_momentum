@@ -10,6 +10,57 @@ once a month, on the last Friday. The newest entry is on top.
 
 ---
 
+## Rebalance of Friday 27 November 2026: the book is live
+
+**Trade done** at the close of Friday 27 November 2026, as published before the trade: long
+XLE, XLK, XLB; short XLU, XLY, XLC, about 333,000 USD each. Entry cost: 2,000 USD (10 bp on
+2,000,000 USD traded). The first weekly P&L comes with the photos of Friday 4 December.
+
+**November in the sector ETFs** (30 October to 27 November, total return): Communication
++7.6%, Consumer Discretionary +4.0%, Consumer Staples +3.7%, Real Estate +2.3%, Financials
++1.2%, Utilities +0.7%, Health Care -0.4%, Industrials -1.1%, Materials -1.1%, Technology
+-10.8%, Energy -11.9%. The week of 20 November was the worst: every sector fell, tech -12.5%.
+
+**A warning shot before launch.** If the book had been live in November, it would have lost
+about **12%**: the three longs fell 7.9% on average and the three shorts rose 4.1%. Last
+year's winners (energy, tech) sold off, and last year's losers (communication, consumer
+discretionary) rallied. This is exactly the momentum crash risk described in the README:
+a sharp rotation hits both legs at once. The book did not hold these positions in November,
+so this loss is not in the track record. It shows the risk is real.
+
+### Next positions: traded at the close of Thursday 24 December 2026
+
+Friday 25 December is Christmas, so the last trading day of the month is Thursday 24 December
+(rule 7). Published now, four weeks before the trade. Signal: total return from the end of
+December 2025 to the end of November 2026 (11 months; December is skipped).
+
+| Rank | ETF | Sector | Signal | Position |
+|---|---|---|---|---|
+| 1 | XLE | Energy | +40.7% | **Long** |
+| 2 | XLP | Consumer Staples | +21.6% | **Long** |
+| 3 | XLV | Health Care | +20.5% | **Long** |
+| 4 | XLB | Materials | +16.5% | - |
+| 5 | XLRE | Real Estate | +12.0% | - |
+| 6 | XLK | Technology | +11.6% | - |
+| 7 | XLI | Industrials | +7.6% | - |
+| 8 | XLF | Financials | +5.6% | - |
+| 9 | XLU | Utilities | +4.6% | **Short** |
+| 10 | XLY | Consumer Discretionary | +1.1% | **Short** |
+| 11 | XLC | Communication | -7.9% | **Short** |
+
+Changes on 24 December: Technology (XLK) and Materials (XLB) leave the long leg, replaced by
+Consumer Staples (XLP) and Health Care (XLV). The short leg does not change.
+
+**Letter to investors, November 2026.** The book starts with a 1,000,000 USD paper capital,
+long energy, technology and materials, short utilities, consumer discretionary and
+communication. November reminds us why momentum pays a premium: the strategy loses when the
+market rotates fast, and it did in November. Tech fell 10.8% in a month and drops from 2nd to
+6th in the ranking, so it leaves the book at the December rebalance. Energy stays first
+despite -11.9%, because its gains of the past year are large. Expected Sharpe of the ETF book
+from the backtest: close to zero. We report every week, good or bad.
+
+---
+
 ## Pre-launch: positions traded at the close of Friday 27 November 2026
 
 Published on 25 November 2026, two days before the trade. Signal: total return from the end of
